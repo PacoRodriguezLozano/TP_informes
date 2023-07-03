@@ -17,11 +17,8 @@ if choice == 'Inicio':
 elif choice == 'Informes UA':
     
     import io
-    import os
     import pandas as pd
     import numpy as np
-    import shutil
-    import subprocess
     from openpyxl import load_workbook
     
     listado = st.file_uploader("Listado de facturas (xlsx)", type=["xlsx"])
@@ -101,7 +98,7 @@ elif choice == 'Informes UA':
         book.save(excel_file)
         book.close()
 
-        with open("ReportCompleted 131-136 1 Semestre.xlsx", "rb") as file:
+        with open("ReportCompleted.xlsx", "rb") as file:
 
             excel_data = io.BytesIO(file.read())
 
